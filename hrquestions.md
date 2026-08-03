@@ -48,6 +48,3 @@ I wanted to be the person who builds the solution, not just the person who uses 
  
 I also love that in web development, you build something today, and real people can use it in a few days. That fast result is what keeps me excited."
 
-
-# Afif Ahmed
-# Full Stack Developer 
