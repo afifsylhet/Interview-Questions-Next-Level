@@ -247,3 +247,68 @@ This happens because JavaScript is a "loosely typed" language.
 ---
 
 
+### Q15. What is an immediately invoked function expression (IIFE)?
+
+An IIFE is a function that runs immediately after it is defined. It is often used to create a private scope so variables don't leak into the global scope.
+
+```javascript
+(function () {
+  console.log("I run immediately!");
+})();
+```
+
+---
+
+## Part 2: Additional 10 Questions (Q16–Q25)
+
+### Q16. What is the "this" keyword in JavaScript?
+
+`this` refers to the object that is currently "calling" or "owning" the function. Its value depends on **how** a function is called, not where it's written.
+
+```javascript
+const person = {
+  name: "Ana",
+  greet() {
+    console.log(this.name); // "this" = person
+  }
+};
+person.greet(); // Ana
+```
+
+In a regular function, `this` depends on how it's called. In an arrow function, `this` comes from the surrounding (outer) code.
+
+---
+
+
+### Q17. What is prototypal inheritance?
+
+In JavaScript, objects can inherit properties and methods from other objects through a hidden link called the **prototype**. This is how JavaScript shares behavior between objects without using classes (though classes are also available as easier syntax).
+
+```javascript
+const animal = {
+  eat() {
+    console.log("eating...");
+  }
+};
+
+const dog = Object.create(animal);
+dog.eat(); // "eating..." (inherited from animal)
+```
+
+---
+
+### Q18. What is the event loop in JavaScript?
+
+JavaScript runs code in a single thread, one thing at a time. The **event loop** is the mechanism that lets JavaScript handle tasks like timers, promises, and events without blocking the main thread. It constantly checks: "Is the main code finished? If yes, run tasks waiting in the queue (like `setTimeout` callbacks)."
+
+```javascript
+console.log("1");
+setTimeout(() => console.log("2"), 0);
+console.log("3");
+
+// Output: 1, 3, 2
+// "2" waits because setTimeout goes to the queue
+```
+
+---
+
