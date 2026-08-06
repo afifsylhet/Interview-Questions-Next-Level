@@ -63,4 +63,38 @@ Primitive types store simple values, not objects. There are 7:
 
 ---
 
+### Q5. Explain how closures work in JavaScript with an example.
+
+A closure is when an inner function "remembers" the variables from its outer function, even after the outer function has finished running.
+
+```javascript
+function outer() {
+  let count = 0;
+  function inner() {
+    count++;
+    return count;
+  }
+  return inner;
+}
+
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+```
+
+Here, `inner()` still has access to `count` because of closure.
+
+---
+
+### Q6. What is the difference between null and undefined?
+
+- **undefined**: A variable has been declared but has no value yet. JavaScript sets this automatically.
+- **null**: An "empty" value that a developer sets on purpose to say "no value here."
+
+```javascript
+let a;         // undefined
+let b = null;  // null (set on purpose)
+```
+
+---
 
