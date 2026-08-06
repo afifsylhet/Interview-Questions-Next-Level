@@ -173,3 +173,40 @@ function addToTotal(x) {
 
 ---
 
+
+
+### Q11. What is the difference between function declaration and function expression?
+
+- **Function Declaration**: Defined with the `function` keyword and a name. It is hoisted, so it can be called before it's defined.
+- **Function Expression**: A function assigned to a variable. It is NOT hoisted the same way — you must define it before using it.
+
+```javascript
+// Declaration
+function greet() {
+  console.log("Hi");
+}
+
+// Expression
+const greet2 = function () {
+  console.log("Hello");
+};
+```
+
+---
+
+### Q12. What are default parameters in JavaScript?
+
+Default parameters let you set a default value for a function parameter if no value (or `undefined`) is passed.
+
+```javascript
+function greet(name = "Guest") {
+  console.log("Hello " + name);
+}
+
+greet();        // Hello Guest
+greet("Sara");  // Hello Sara
+```
+
+---
+
+
