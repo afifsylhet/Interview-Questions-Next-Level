@@ -351,3 +351,44 @@ promise
 
 ---
 
+
+### Q21. What is async/await?
+
+`async/await` is a cleaner way to work with Promises, making asynchronous code look like normal step-by-step code.
+
+```javascript
+async function getData() {
+  try {
+    let response = await fetch("https://api.example.com/data");
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
+```
+
+`await` pauses the function until the Promise finishes.
+
+---
+
+### Q22. What are higher-order functions?
+
+A higher-order function is a function that either:
+1. Takes another function as an argument, or
+2. Returns a function.
+
+```javascript
+// Takes a function as argument
+[1, 2, 3].map((num) => num * 2); // [2, 4, 6]
+
+// Returns a function
+function multiplier(x) {
+  return function (y) {
+    return x * y;
+  };
+}
+```
+
+---
+
