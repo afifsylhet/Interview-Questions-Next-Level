@@ -35,5 +35,32 @@ var x = 5;
 
 ---
 
+### Q3. What are the primitive data types in JavaScript?
+
+Primitive types store simple values, not objects. There are 7:
+
+1. `String` – text, e.g. `"hello"`
+2. `Number` – numbers, e.g. `42`
+3. `Boolean` – `true` or `false`
+4. `Undefined` – a variable declared but not assigned
+5. `Null` – an empty/no value
+6. `Symbol` – a unique value (used rarely)
+7. `BigInt` – for very large numbers
+
+---
+
+### Q4. What is the difference between == and === in JavaScript?
+
+- `==` (loose equality): Compares values **after** converting types if needed.
+- `===` (strict equality): Compares both **value and type**, no conversion.
+
+```javascript
+5 == "5";   // true  (converts string to number)
+5 === "5";  // false (different types)
+```
+
+**Tip:** Always prefer `===` to avoid unexpected bugs.
+
+---
 
 
