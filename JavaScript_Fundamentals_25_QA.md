@@ -98,3 +98,78 @@ let b = null;  // null (set on purpose)
 
 ---
 
+
+
+### Q7. What are arrow functions and how do they differ from regular functions?
+
+Arrow functions are a shorter way to write functions using `=>`.
+
+```javascript
+// Regular function
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const add2 = (a, b) => a + b;
+```
+
+Key differences:
+- Arrow functions do **not** have their own `this` — they use `this` from the surrounding code.
+- Arrow functions cannot be used as constructors (no `new`).
+- Shorter syntax, good for small functions like callbacks.
+
+---
+
+### Q8. What is the scope chain in JavaScript?
+
+When JavaScript looks for a variable, it first checks the current scope. If not found, it checks the outer scope, then the next outer scope, and so on until it reaches the global scope. This chain of scopes is called the **scope chain**.
+
+```javascript
+let a = "global";
+function outer() {
+  let b = "outer";
+  function inner() {
+    console.log(a, b); // finds both through scope chain
+  }
+  inner();
+}
+outer();
+```
+
+---
+
+### Q9. Explain the concept of the temporal dead zone.
+
+The Temporal Dead Zone (TDZ) is the time between entering a block and the point where a `let` or `const` variable is actually declared. During this time, the variable exists but cannot be accessed.
+
+```javascript
+console.log(x); // ReferenceError
+let x = 10;
+```
+
+`x` is in the TDZ from the start of the block until `let x = 10` runs.
+
+---
+
+### Q10. What is a pure function? Give an example.
+
+A pure function:
+1. Always gives the same output for the same input.
+2. Does not change (mutate) anything outside itself (no side effects).
+
+```javascript
+// Pure function
+function add(a, b) {
+  return a + b;
+}
+
+// Impure function (changes outside variable)
+let total = 0;
+function addToTotal(x) {
+  total += x;
+}
+```
+
+---
+
