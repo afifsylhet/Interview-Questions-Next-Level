@@ -209,4 +209,41 @@ greet("Sara");  // Hello Sara
 
 ---
 
+### Q13. What is the typeof operator and what are its possible return values?
+
+`typeof` tells you the data type of a value. Possible return values:
+
+- `"string"`
+- `"number"`
+- `"boolean"`
+- `"undefined"`
+- `"object"` (also returned for `null` — this is a known JS quirk)
+- `"function"`
+- `"symbol"`
+- `"bigint"`
+
+```javascript
+typeof "hi";     // "string"
+typeof 5;        // "number"
+typeof null;     // "object" (quirk!)
+typeof undefined;// "undefined"
+```
+
+---
+
+### Q14. Explain type coercion in JavaScript with examples.
+
+Type coercion is when JavaScript automatically converts a value from one type to another.
+
+```javascript
+"5" + 1;    // "51" (number becomes string)
+"5" - 1;    // 4   (string becomes number)
+true + 1;   // 2   (true becomes 1)
+"5" == 5;   // true (string compared with number)
+```
+
+This happens because JavaScript is a "loosely typed" language.
+
+---
+
 
