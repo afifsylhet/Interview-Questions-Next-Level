@@ -392,3 +392,63 @@ function multiplier(x) {
 
 ---
 
+### Q23. What is the spread operator and rest operator?
+
+Both use `...` but work differently:
+
+- **Spread**: Expands an array or object into individual items.
+- **Rest**: Collects multiple items into a single array.
+
+```javascript
+// Spread
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+// Rest
+function sum(...numbers) {
+  return numbers.reduce((total, n) => total + n, 0);
+}
+sum(1, 2, 3); // 6
+```
+
+---
+
+### Q24. What are template literals?
+
+Template literals let you write strings using backticks (`` ` ``) instead of quotes. They allow embedding variables directly using `${}` and support multi-line strings.
+
+```javascript
+const name = "Sara";
+const message = `Hello, ${name}!
+Welcome to JavaScript.`;
+console.log(message);
+```
+
+---
+
+### Q25. What is destructuring in JavaScript?
+
+Destructuring lets you unpack values from arrays or objects into separate variables easily.
+
+```javascript
+// Array destructuring
+const [a, b] = [1, 2];
+
+// Object destructuring
+const { name, age } = { name: "Sara", age: 25 };
+
+console.log(a, b);       // 1 2
+console.log(name, age);  // Sara 25
+```
+
+---
+
+## Quick Tip for Interview
+
+For every question, try to:
+1. Give a **short definition** first.
+2. Show a **small code example**.
+3. Mention **why/when** it's useful in real projects.
+
+Good luck with your interview! 🚀
+
