@@ -312,3 +312,42 @@ console.log("3");
 
 ---
 
+### Q19. What is a callback function?
+
+A callback is a function passed as an argument to another function, to be run later (often after some task finishes).
+
+```javascript
+function greet(name, callback) {
+  console.log("Hi " + name);
+  callback();
+}
+
+greet("Sara", function () {
+  console.log("Callback finished!");
+});
+```
+
+---
+
+### Q20. What is a Promise and how does it work?
+
+A Promise is an object that represents a value that may be available now, later, or never (usually from async tasks like API calls). It has three states:
+
+- **pending**: still working
+- **fulfilled**: task succeeded
+- **rejected**: task failed
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+  let success = true;
+  if (success) resolve("Done!");
+  else reject("Failed!");
+});
+
+promise
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
+```
+
+---
+
